@@ -76,6 +76,14 @@
     to { background-position: 200% center; }
   }
 
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }
+  
+  .animate-shine {
+    animation: shine 8s linear infinite;
+  }
+
   /* Typography */
   .section-title {
     font-family: var(--font-display);
