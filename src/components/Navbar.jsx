@@ -39,9 +39,9 @@ const Navbar = () => {
     setIsOpen(false);
     const element = document.querySelector(href);
     if (element) {
-        setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   };
 
@@ -54,10 +54,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <motion.a 
-            href="#home" 
-            className="text-2xl font-bold font-display text-foreground no-underline" 
-            whileHover={{ scale: 1.05 }} 
+          <motion.a
+            href="#home"
+            className="text-2xl font-bold font-display text-foreground no-underline"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={(e) => scrollToSection(e, '#home')}
           >
@@ -66,21 +66,21 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)} 
+                onClick={(e) => scrollToSection(e, link.href)}
                 className={`nav-link bg-transparent border-none cursor-pointer text-base no-underline ${activeSection === link.href.substring(1) ? 'active' : ''}`}
               >
                 {link.name}
               </a>
             ))}
-            <motion.a 
-                href="#contact"
-                onClick={(e) => scrollToSection(e, '#contact')}
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-medium glow-button border-none cursor-pointer inline-flex items-center justify-center no-underline"
+            <motion.a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, '#contact')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-medium glow-button border-none cursor-pointer inline-flex items-center justify-center no-underline"
             >
               Hire Me
             </motion.a>
@@ -94,28 +94,29 @@ const Navbar = () => {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }} 
-            animate={{ opacity: 1, height: 'auto' }} 
-            exit={{ opacity: 0, height: 0 }} 
-            transition={{ duration: 0.3 }} 
-            className="md:hidden glass-card mt-2 mx-4 overflow-hidden"
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden glass-card mt-2 mx-4 overflow-hidden border border-white/10"
           >
-            <div className="p-4 flex flex-col gap-4">
+            <div className="p-6 flex flex-col gap-5">
               {navLinks.map((link) => (
-                <a 
-                    key={link.name} 
-                    href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)} 
-                    className={`nav-link py-2 text-left bg-transparent border-none cursor-pointer block no-underline ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className={`text-lg font-medium text-left bg-transparent border-none cursor-pointer block no-underline transition-colors ${activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground'}`}
                 >
                   {link.name}
                 </a>
               ))}
-              <a 
+              <hr className="border-white/5 my-2" />
+              <a
                 href="#contact"
-                onClick={(e) => scrollToSection(e, '#contact')} 
-                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-medium text-center border-none cursor-pointer block w-full no-underline"
+                onClick={(e) => scrollToSection(e, '#contact')}
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold text-center border-none cursor-pointer block w-full no-underline shadow-lg shadow-primary/20"
               >
                 Hire Me
               </a>

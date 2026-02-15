@@ -36,7 +36,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-16 md:py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10" />
 
@@ -55,7 +55,7 @@ const About = () => {
           <div className="grid lg:grid-cols-5 gap-8 items-stretch">
             {/* Left Column: Who I Am (Spans 2 cols) */}
             <motion.div variants={itemVariants} className="lg:col-span-2 h-full">
-              <div className="h-full glass-card p-8 md:p-10 flex flex-col justify-between border-primary/20 relative overflow-hidden group">
+              <div className="h-full glass-card p-6 md:p-10 flex flex-col justify-between border-primary/20 relative overflow-hidden group">
                 {/* Decorative Gradient Blob */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10 transition-all duration-500 group-hover:bg-primary/20" />
 
@@ -88,7 +88,7 @@ const About = () => {
                   key={card.title}
                   variants={itemVariants}
                   whileHover={{ y: -5, borderColor: "rgba(249, 115, 22, 0.4)" }}
-                  className="glass-card p-8 flex flex-col justify-center h-full border border-white/5 transition-colors duration-300"
+                  className="glass-card p-6 md:p-8 flex flex-col justify-center h-full border border-white/5 transition-colors duration-300"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6 text-orange-500">
                     <card.icon className="w-7 h-7" />

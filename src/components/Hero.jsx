@@ -85,7 +85,7 @@ const Hero = () => {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl md:text-7xl font-bold font-display mb-6 leading-tight tracking-tight text-foreground"
+              className="text-4xl sm:text-6xl md:text-7xl font-bold font-display mb-6 leading-tight tracking-tight text-foreground"
             >
               Building Digital <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-[length:300%_auto] animate-shine">
@@ -149,7 +149,7 @@ const Hero = () => {
             className="order-1 lg:order-2 flex justify-center lg:justify-end relative"
           >
             {/* Modern Abstract Frame */}
-            <div className="relative w-[320px] h-[350px] md:w-[400px] md:h-[450px]">
+            <div className="relative w-[280px] h-[310px] sm:w-[320px] sm:h-[350px] md:w-[400px] md:h-[450px]">
               {/* Rotating Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-600 rounded-[2rem] rotate-6 opacity-30 blur-lg animate-pulse" />
               <div className="absolute inset-0 border-2 border-primary/20 rounded-[2rem] rotate-3" />
@@ -158,24 +158,24 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-6 -right-6 z-20 bg-card/90 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-xl flex items-center gap-2"
+                className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 z-20 bg-card/90 backdrop-blur-md border border-white/10 p-2 sm:p-3 rounded-2xl shadow-xl flex items-center gap-2"
               >
-                <div className="p-2 bg-orange-500/10 rounded-lg text-orange-500">
-                  <Cpu size={20} />
+                <div className="p-1.5 sm:p-2 bg-orange-500/10 rounded-lg text-orange-500">
+                  <Cpu size={16} className="sm:w-5 sm:h-5" />
                 </div>
-                <span className="font-bold text-sm">Full Stack</span>
+                <span className="font-bold text-xs sm:text-sm">Full Stack</span>
               </motion.div>
 
               {/* Floating Badge (Bottom Left) */}
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-6 -left-6 z-20 bg-card/90 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-xl flex items-center gap-2"
+                className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 z-20 bg-card/90 backdrop-blur-md border border-white/10 p-2 sm:p-3 rounded-2xl shadow-xl flex items-center gap-2"
               >
-                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-500">
-                  <Database size={20} />
+                <div className="p-1.5 sm:p-2 bg-blue-500/10 rounded-lg text-blue-500">
+                  <Database size={16} className="sm:w-5 sm:h-5" />
                 </div>
-                <span className="font-bold text-sm">Backend Expert</span>
+                <span className="font-bold text-xs sm:text-sm">Backend Expert</span>
               </motion.div>
 
               {/* Image Container */}

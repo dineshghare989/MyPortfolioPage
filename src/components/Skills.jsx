@@ -155,7 +155,7 @@ const SkillCard = ({ skill, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       whileHover={{ y: -5, scale: 1.02 }}
-      className={`relative group p-6 rounded-2xl border ${skill.border} ${skill.bg} backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-lg ${skill.shadow}`}
+      className={`relative group p-5 sm:p-6 rounded-2xl border ${skill.border} ${skill.bg} backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-lg ${skill.shadow}`}
     >
       {/* Background Gradient Blob */}
       <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full bg-gradient-to-br ${skill.color} opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500`} />
@@ -201,7 +201,7 @@ const SkillCard = ({ skill, index }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="py-16 md:py-24 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/4 -left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
       <div className="absolute bottom-1/4 -right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-30" />

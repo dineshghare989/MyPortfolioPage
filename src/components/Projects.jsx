@@ -66,7 +66,7 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative rounded-3xl h-[450px] overflow-hidden bg-card/50 border border-white/10 p-2"
+      className="group relative rounded-3xl h-[380px] sm:h-[450px] overflow-hidden bg-card/50 border border-white/10 p-2"
     >
       <div className="relative w-full h-full rounded-2xl overflow-hidden">
         {/* Full Background Image */}
@@ -80,7 +80,7 @@ const ProjectCard = ({ project, index }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
         {/* Floating Content Box */}
-        <div className="absolute bottom-4 left-4 right-4 p-5 bg-card/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl transform transition-transform duration-300 group-hover:-translate-y-2">
+        <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-4 sm:p-5 bg-card/90 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl transform transition-transform duration-300 group-hover:-translate-y-2">
           <div className="flex justify-between items-start mb-3">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-1 flex items-center gap-2">
@@ -133,7 +133,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-16 md:py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] -z-10" />

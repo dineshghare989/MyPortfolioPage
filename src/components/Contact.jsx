@@ -67,10 +67,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden min-h-screen flex items-center">
+    <section id="contact" className="py-16 md:py-24 relative overflow-hidden min-h-screen flex items-center">
       {/* Background Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none pointer-events-none opacity-[0.03] z-0 flex justify-center">
-        <span className="text-[20vw] font-bold text-white leading-none whitespace-nowrap">CONTACT</span>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full select-none pointer-events-none opacity-[0.03] z-0 flex justify-center overflow-hidden">
+        <span className="text-[18vw] sm:text-[20vw] font-bold text-white leading-none whitespace-nowrap">CONTACT</span>
       </div>
 
       {/* Decorative Blobs */}
@@ -106,14 +106,14 @@ const Contact = () => {
                   href={info.href}
                   variants={itemVariants}
                   whileHover={{ x: 10, backgroundColor: "rgba(255, 255, 255, 0.03)" }}
-                  className="flex items-center gap-6 p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm transition-all group hover:border-primary/30"
+                  className="flex items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm transition-all group hover:border-primary/30"
                 >
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <info.icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary group-hover:text-black transition-colors" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground font-medium mb-1">{info.label}</p>
-                    <p className="text-lg font-semibold text-white group-hover:text-primary transition-colors">{info.value}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground font-medium mb-1">{info.label}</p>
+                    <p className="text-base sm:text-lg font-semibold text-white group-hover:text-primary transition-colors">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -125,7 +125,7 @@ const Contact = () => {
             {/* Glow Effect behind form */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-600/5 blur-2xl -z-10 rounded-3xl" />
 
-            <form onSubmit={handleSubmit} className="p-8 md:p-10 rounded-3xl bg-black/40 border border-white/10 backdrop-blur-xl shadow-2xl space-y-6">
+            <form onSubmit={handleSubmit} className="p-6 sm:p-8 md:p-10 rounded-3xl bg-black/40 border border-white/10 backdrop-blur-xl shadow-2xl space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-white/80 ml-1">Your Name</label>
