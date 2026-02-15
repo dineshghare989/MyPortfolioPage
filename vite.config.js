@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/MyPortfolioPage/',
+  base: process.env.DEPLOY_TARGET === 'gh-pages' ? '/MyPortfolioPage/' : '/',
 })
