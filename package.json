@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dineshghare989.github.io/MyPortfolio",
+  "homepage": "https://dineshghare989.github.io/MyPortfolioPage",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -32,5 +32,4 @@
     "globals": "^16.5.0",
     "vite": "^7.2.4"
   }
-  
 }
