@@ -181,7 +181,7 @@ const Hero = () => {
               <div className="relative h-full w-full rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-card/50 backdrop-blur-sm group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity" />
                 <img
-                  src="./src/assets/pic.jpg"
+                  src={profilePic}
                   alt="Dinesh Ghare"
                   className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                 />
