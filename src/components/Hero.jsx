@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePic from '../assets/pic.jpg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Github, Linkedin, Twitter, ArrowDown, Mail, Code, Terminal, Cpu, Database } from 'lucide-react';
 
