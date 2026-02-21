@@ -193,9 +193,19 @@ const Projects = () => {
 
   // Responsive items per page
   useEffect(() => {
+    let lastWidth = window.innerWidth;
     const handleResize = () => {
-      setItemsPerPage(window.innerWidth < 768 ? 3 : 6);
-      setCurrentPage(1); // Reset to page 1 on resize to avoid overflow
+      const width = window.innerWidth;
+      const newItemsPerPage = width < 768 ? 3 : 6;
+
+      setItemsPerPage(newItemsPerPage);
+
+      // Only reset to page 1 if we actually crossed the breakpoint
+      // This prevents resets on mobile when the address bar hides/shows
+      if ((lastWidth >= 768 && width < 768) || (lastWidth < 768 && width >= 768)) {
+        setCurrentPage(1);
+      }
+      lastWidth = width;
     };
     handleResize();
     window.addEventListener('resize', handleResize);
