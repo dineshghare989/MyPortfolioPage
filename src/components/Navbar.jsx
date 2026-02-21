@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"; // Common icon library used with this st
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
@@ -80,7 +81,7 @@ const Navbar = () => {
               onClick={(e) => scrollToSection(e, '#contact')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-medium glow-button border-none cursor-pointer inline-flex items-center justify-center no-underline"
+              className="bg-gradient-to-r from-orange-500 to-amber-500 text-black px-6 py-2.5 rounded-full font-bold glow-button border-none cursor-pointer inline-flex items-center justify-center no-underline shadow-lg shadow-orange-500/20"
             >
               Hire Me
             </motion.a>
@@ -99,7 +100,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden glass-card mt-2 mx-4 overflow-hidden border border-white/10"
+            className="md:hidden bg-[#0b1120]/95 backdrop-blur-md mt-2 mx-4 overflow-hidden border border-white/10 rounded-2xl shadow-2xl"
           >
             <div className="p-6 flex flex-col gap-5">
               {navLinks.map((link) => (
@@ -116,7 +117,7 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={(e) => scrollToSection(e, '#contact')}
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold text-center border-none cursor-pointer block w-full no-underline shadow-lg shadow-primary/20"
+                className="bg-gradient-to-r from-orange-500 to-amber-500 text-black px-6 py-3 rounded-xl font-bold text-center border-none cursor-pointer block w-full no-underline shadow-lg shadow-orange-500/30"
               >
                 Hire Me
               </a>

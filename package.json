@@ -12,6 +12,7 @@
     "deploy": "set DEPLOY_TARGET=gh-pages && npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.29.2",
     "lucide-react": "^0.563.0",

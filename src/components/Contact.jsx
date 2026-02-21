@@ -88,11 +88,9 @@ const Contact = () => {
           {/* Left Column: Info */}
           <div className="space-y-10">
             <motion.div variants={itemVariants}>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Let's work <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                  together
-                </span>
+              <span className="text-orange-500 font-mono text-sm uppercase tracking-[0.4em] mb-4 block font-semibold opacity-80">Get In Touch</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter">
+                Let's <span className="gradient-text">Connect</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-md">
                 Have a project in mind? I'm always open to discussing new ideas and opportunities. Let's build something amazing.

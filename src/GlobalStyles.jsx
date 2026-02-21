@@ -10,19 +10,19 @@ const GlobalStyles = () => (
       --card-foreground: 210 40% 98%;
       --popover: 222 47% 8%;
       --popover-foreground: 210 40% 98%;
-      --primary: 32 95% 55%;
+      --primary: 24 95% 53%; /* Vivid Orange */
       --primary-foreground: 222 47% 5%;
       --secondary: 217 33% 17%;
       --secondary-foreground: 210 40% 98%;
       --muted: 217 33% 17%;
       --muted-foreground: 215 20% 65%;
-      --accent: 217 91% 60%;
+      --accent: 38 92% 50%; /* Amber */
       --accent-foreground: 210 40% 98%;
       --destructive: 0 84% 60%;
       --destructive-foreground: 210 40% 98%;
       --border: 217 33% 17%;
       --input: 217 33% 17%;
-      --ring: 32 95% 55%;
+      --ring: 24 95% 53%;
       --radius: 0.75rem;
       --gradient-start: 222 47% 3%;
       --gradient-mid: 217 50% 8%;
@@ -153,6 +153,21 @@ const GlobalStyles = () => (
     @media (min-width: 768px) { .container { max-width: 768px; } }
     @media (min-width: 1024px) { .container { max-width: 1024px; } }
     @media (min-width: 1280px) { .container { max-width: 1280px; } }
+
+    /* Custom Scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary) / 0.5);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--primary));
+    }
   `}</style>
 );
 export default GlobalStyles

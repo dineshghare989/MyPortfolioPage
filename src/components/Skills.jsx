@@ -63,10 +63,10 @@ const skills = [
     level: 'Advanced',
     proficiency: 85,
     description: 'Full-stack React framework',
-    color: 'from-gray-200 to-white',
-    bg: 'bg-gray-500/10',
-    border: 'border-gray-500/20',
-    shadow: 'shadow-gray-500/25'
+    color: 'from-gray-300 to-white',
+    bg: 'bg-white/5',
+    border: 'border-white/10',
+    shadow: 'shadow-white/5'
   },
   {
     name: 'MongoDB',
@@ -144,7 +144,7 @@ const skills = [
     bg: 'bg-purple-500/10',
     border: 'border-purple-500/20',
     shadow: 'shadow-purple-500/25'
-  },
+  }
 ];
 
 const SkillCard = ({ skill, index }) => {
@@ -152,8 +152,8 @@ const SkillCard = ({ skill, index }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.3, delay: index * 0.03 }}
       whileHover={{ y: -5, scale: 1.02 }}
       className={`relative group p-5 sm:p-6 rounded-2xl border ${skill.border} ${skill.bg} backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-lg ${skill.shadow}`}
     >
@@ -182,7 +182,7 @@ const SkillCard = ({ skill, index }) => {
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: `${skill.proficiency}%` }}
-            transition={{ duration: 1, delay: 0.5 + (index * 0.1), ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.2 + (index * 0.05), ease: "easeOut" }}
             viewport={{ once: true }}
             className={`h-full rounded-full bg-gradient-to-r ${skill.color}`}
           />
@@ -213,12 +213,11 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-            Technical <span className="gradient-text">Proficiency</span>
+          <span className="text-orange-500 font-mono text-sm uppercase tracking-[0.4em] mb-4 block font-semibold opacity-80">What I Know</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            My <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A curated stack of modern technologies I use to build scalable, high-performance applications.
-          </p>
+          <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full mt-8 shadow-[0_0_20px_rgba(249,115,22,0.5)] opacity-80" />
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

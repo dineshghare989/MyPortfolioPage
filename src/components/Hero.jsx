@@ -13,18 +13,18 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+        staggerChildren: 0.05,
+        delayChildren: 0.05
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 50 }
+      transition: { duration: 0.4, type: 'spring', stiffness: 100 }
     }
   };
 
@@ -35,15 +35,11 @@ const Hero = () => {
         {/* Animated Gradient Blobs */}
         <motion.div
           style={{ y: y1 }}
-          animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-40 mix-blend-screen"
         />
         <motion.div
           style={{ y: y2 }}
-          animate={{ scale: [1, 1.2, 1], rotate: [0, -5, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] opacity-40 mix-blend-screen"
+          className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[120px] opacity-40 mix-blend-screen"
         />
 
         {/* Grid Overlay */}
@@ -88,7 +84,7 @@ const Hero = () => {
               className="text-4xl sm:text-6xl md:text-7xl font-bold font-display mb-6 leading-tight tracking-tight text-foreground"
             >
               Building Digital <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-[length:300%_auto] animate-shine">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-500 to-orange-600 bg-[length:300%_auto] animate-shine">
                 Experiences
               </span>
             </motion.h1>
@@ -108,7 +104,7 @@ const Hero = () => {
                 href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all w-full sm:w-auto flex justify-center items-center gap-2 group no-underline"
+                className="bg-gradient-to-r from-orange-500 to-amber-500 text-black px-10 py-4 rounded-full font-bold text-lg shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all w-full sm:w-auto flex justify-center items-center gap-2 group no-underline"
               >
                 View My Work <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </motion.a>
@@ -151,7 +147,7 @@ const Hero = () => {
             {/* Modern Abstract Frame */}
             <div className="relative w-[280px] h-[310px] sm:w-[320px] sm:h-[350px] md:w-[400px] md:h-[450px]">
               {/* Rotating Border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-600 rounded-[2rem] rotate-6 opacity-30 blur-lg animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-amber-600 rounded-[2rem] rotate-6 opacity-30 blur-lg animate-pulse" />
               <div className="absolute inset-0 border-2 border-primary/20 rounded-[2rem] rotate-3" />
 
               {/* Floating Badge (Top Right) */}
@@ -172,7 +168,7 @@ const Hero = () => {
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                 className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 z-20 bg-card/90 backdrop-blur-md border border-white/10 p-2 sm:p-3 rounded-2xl shadow-xl flex items-center gap-2"
               >
-                <div className="p-1.5 sm:p-2 bg-blue-500/10 rounded-lg text-blue-500">
+                <div className="p-1.5 sm:p-2 bg-amber-500/10 rounded-lg text-amber-500">
                   <Database size={16} className="sm:w-5 sm:h-5" />
                 </div>
                 <span className="font-bold text-xs sm:text-sm">Backend Expert</span>
